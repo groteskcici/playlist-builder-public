@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "properties": {
+    "title": { "type": "string" },
+    "competition_search_queries": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 5,
+      "maxItems": 5
+    },
+    "competition_verdict": {
+      "type": "string",
+      "enum": ["publish", "skip", "retitle"]
+    },
+    "reasoning": { "type": "string" },
+    "confidence": { "type": ["number", "null"] },
+    "description": { "type": "string" },
+    "rationale": { "type": "string" },
+    "relevant_queries": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "relevant_competitor_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "revised_title": { "type": ["string", "null"] },
+    "revised_competition_search_queries": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "required": [
+    "title",
+    "competition_search_queries",
+    "competition_verdict",
+    "reasoning",
+    "confidence",
+    "description",
+    "rationale",
+    "relevant_queries",
+    "relevant_competitor_ids",
+    "revised_title",
+    "revised_competition_search_queries"
+  ],
+  "additionalProperties": false
+}

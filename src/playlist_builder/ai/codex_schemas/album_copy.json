@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "description": { "type": "string" },
+    "rationale": { "type": "string" }
+  },
+  "required": ["description", "rationale"],
+  "additionalProperties": false
+}
